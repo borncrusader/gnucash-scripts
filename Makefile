@@ -1,3 +1,8 @@
+makedb:
+	if [ ! -f matchers.db ]; then
+		sqlite3 matchers.db
+	fi
+
 build:
 	go build ./...
 
